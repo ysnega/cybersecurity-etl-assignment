@@ -1,0 +1,5 @@
+ProductID,ProductName,Category,Cost
+P001,Keyboard,Peripherals,10.00
+P002,Mouse,Peripherals,18.00
+P003,Monitor,Displays,40.00
+P004,Webcam,Peripherals,80.00
