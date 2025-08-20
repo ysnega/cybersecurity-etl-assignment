@@ -1,6 +1,6 @@
-# cybersecurity-etl-assignment
+# Cybersecurity-ETL-Assignment
 
-# instructions 
+# Instructions 
 
 1. Install dependencies  (pip install pandas tabulate)
 2. Run `etl_pipeline.py`  in terminal using "python etl_pipeline.py"
@@ -8,8 +8,10 @@
 4. View results in your terminal!
 
 
-# task 2
-data model description 
+# Task 2
+
+Data model description:
+
 fact_sales
 - stores sales transaction 
 - columns:
@@ -48,8 +50,9 @@ Relationships
 - The fact_sales table links to dim_product, dim_date, and dim_customer using foreign keys.
 - This structure makes it easy to analyze sales by product, time, and customer.
             
-# task 3
-what is the total revenue for each product category for each month?
+# Task 3
+
+What is the total revenue for each product category for each month?
 ```sql
 SELECT 
     d.Year,
@@ -66,13 +69,14 @@ GROUP BY d.Year, d.Month, d.MonthName, p.Category
 ORDER BY d.Year, d.Month, p.Category;
 ```
 
-# task 4
-the designed star schema data model consists of:
+# Task 4
+
+The designed star schema data model consists of:
 1.fact_sales: contains all sales transactions, customer, and date dimensions, quantity, price, revenue.
 2. dim_product: stores product details such as product name, category, and cost.
 3. dim_date: breaks down each date into year, month, day, month name, and quarter, enabling flexible time-based analysis.
 4. dim_customer: contains customer identifiers.
-# key metrics 
-1. fast aggregration: allows for rapid aggregration of sales metrics (e.g, total revenue, quantity sold and etc)
-2. flexible slicing and dicing: filter and group data by product category, time period, customer and etc 
-3. simplified queries: analytical queries are straightforward, making it easy to build visualizaations and KPIs
+# Key metrics 
+1. Fast aggregration: allows for rapid aggregration of sales metrics (e.g, total revenue, quantity sold and etc)
+2. Flexible slicing and dicing: filter and group data by product category, time period, customer and etc 
+3. Simplified queries: analytical queries are straightforward, making it easy to build visualizaations and KPIs
